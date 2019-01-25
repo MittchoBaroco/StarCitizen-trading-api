@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_23_212015) do
+ActiveRecord::Schema.define(version: 2019_01_25_130710) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "goods", force: :cascade do |t|
+    t.string "good_type"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "locations", force: :cascade do |t|
     t.string "name"
@@ -24,4 +31,17 @@ ActiveRecord::Schema.define(version: 2019_01_23_212015) do
     t.index ["parent_id"], name: "index_locations_on_parent_id"
   end
 
+  create_table "price_reports", force: :cascade do |t|
+    t.string "report_type"
+    t.float "price"
+    t.bigint "good_id"
+    t.bigint "location_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["good_id"], name: "index_price_reports_on_good_id"
+    t.index ["location_id"], name: "index_price_reports_on_location_id"
+  end
+
+  add_foreign_key "price_reports", "goods"
+  add_foreign_key "price_reports", "locations"
 end

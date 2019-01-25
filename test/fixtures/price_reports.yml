@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  report_type: MyString
+  price: 1.5
+  good: one
+  location: one
+
+two:
+  report_type: MyString
+  price: 1.5
+  good: two
+  location: two
