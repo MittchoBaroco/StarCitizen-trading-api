@@ -10,4 +10,4 @@ Location.create([{name: 'Stanton', location_type: 'Star'}, {name: "Crusader", lo
 Good.create([{name: 'Medical Supplies'}, {name: 'Waste'}])
 
 #initial price report (price of v 3.4.3 - 01.02.2019)
-PriceReport.create([{report_type: 'sell', price: 0.01, good_id: 1, location_id: 2}, {report_type: 'sell', price: 0.01, good_id: 0, location_id: 2}])
+PriceReport.create([{report_type: 'sell', price: 0.01, good_id: 2, location_id: 3}, {report_type: 'sell', price: 17.02, good_id: 1, location_id: 3}])
