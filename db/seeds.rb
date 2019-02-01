@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Location.create([{name: 'Stanton', location_type: 'Star'}, {name: "Crusader", location_type: 'Planet', parent_id: 1}, {name: "Port Olisar", location_type: 'Station', parent_id: 2}])
+Good.create([{name: 'Medical Supplies'}, {name: 'Waste'}])
+
+#initial price report (price of v 3.4.3 - 01.02.2019)
+PriceReport.create([{report_type: 'sell', price: 0.01, good_id: 1, location_id: 2}, {report_type: 'sell', price: 0.01, good_id: 0, location_id: 2}])
