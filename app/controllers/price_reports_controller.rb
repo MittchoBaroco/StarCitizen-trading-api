@@ -3,7 +3,7 @@ class PriceReportsController < ApplicationController
 
   # GET /price_reports
   def index
-    @price_reports = PriceReport.all
+    @price_reports = PriceReport.all.order(created_at: :desc)
 
     render json: @price_reports
   end
